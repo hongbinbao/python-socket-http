@@ -2,13 +2,13 @@
 # -*- coding:utf-8 -*- 
 import socket, sys, threading  
     
-SERVER = '127.0.0.1'   
+SERVER = u'127.0.0.1'   
 PORT = 8080    
 MAXTHREADS = 10  
 RECVBUFLEN = 1024  
-HTTPTAG = 'HTTP/1.'  
-MYTAG = '^MyP 1.0'  
-RSTR = ''''''HTTP/1.1 200 OK 
+HTTPTAG = u'HTTP/1.'  
+MYTAG = u'^MyP 1.0'  
+RSTR = u''''HTTP/1.1 200 OK 
 Proxy-Connection: Keep-Alive 
 Connection: Keep-Alive 
 Content-Length: 8296 
@@ -20,10 +20,10 @@ Server: BWS/1.0
 Cache-Control: private 
  
 test'''  
-RSTR2 = '''''my defined p... '''  
-RSTR3 = '''''unknown p... '''  
-userlist = ['user01', 'user02']  
-BADUSER = 'bad'  
+RSTR2 = u'''''my defined p... '''  
+RSTR3 = u'''''unknown p... '''  
+userlist = [u'user01', u'user02']  
+BADUSER = u'bad'  
 class Checker(threading.Thread):  
     def __init__(self,socket,num):  
         threading.Thread.__init__(self)  
